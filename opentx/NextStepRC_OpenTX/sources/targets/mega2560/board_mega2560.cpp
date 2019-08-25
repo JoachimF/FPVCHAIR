@@ -135,15 +135,15 @@ bool switchState(EnumKeys enuk)
   // ID2      1          0
 
 case SW_ID0:
-    result = (TQS_buttons >> INP_C_ID2 & 1);
+    result = (TQS_buttons >> 1 & 1);
     break;
 
   case SW_ID1:
-    result = !(TQS_buttons >> INP_C_ID1 & 1) && !(TQS_buttons >> INP_C_ID2 & 1);
+    result = !(TQS_buttons >> 0 & 1) && !(TQS_buttons >> 1 & 1);
     break;
 
   case SW_ID2:
-    result = (TQS_buttons >> INP_C_ID1 & 1);
+    result = (TQS_buttons >> 0 & 1);
     break;
 	
 /*  case SW_ID0:
